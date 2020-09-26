@@ -8,6 +8,7 @@ class MusicLibraryController
   end
   
   def call
+    # set input to nil outside of the loop so that the variable was defined and would loop properly!
     input = nil
     while input != "exit"
       puts "Welcome to your music library!"
