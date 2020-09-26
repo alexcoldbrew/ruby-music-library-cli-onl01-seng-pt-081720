@@ -25,7 +25,11 @@ class MusicLibraryController
   end
   
   def list_songs
-    
+    # all songs, .sort makes alphabetical, iterate thru all w an index
+    # need the index to add 1 to it and print a numbered list of all
+    Song.all.sort{|a, b| a.name <=> b.name}.each_with_index do |s, i|
+      puts "#{i+1}. #{s.artist.name} - #{s.name} - #{s.genre.name}"
+    end
   end
   
 end
